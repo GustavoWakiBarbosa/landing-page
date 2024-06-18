@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import axios from 'axios'
 import { setLocale, object, string } from 'yup'
+import { vMaska } from "maska"
+
 
 const router = useRouter()
 
@@ -128,7 +130,7 @@ const onSubmit = handleSubmit(async (values) => {
           <label class="label p-0 pb-1">
             <span
               class="label-text text-orion-title-md font-medium text-orion-neutrals-500"
-              :class="phone ? '' : 'border-orion-primary-500'"
+              :class="email ? '' : 'border-orion-primary-500'"
               >E-mail</span
             >
           </label>
@@ -154,10 +156,12 @@ const onSubmit = handleSubmit(async (values) => {
           </label>
           <input
             v-model.trim="phone"
-            type="number"
+            type="text"
             class="bg-orion-secondary-500 border-b-2 border-orion-secondary-300 focus:bg-white text-white focus:text-orion-primary-500 input rounded-none border-0 placeholder:text-grey focus:outline-none focus:ring-0 focus:border-orion-primary-500 outline-offset-0"
             placeholder="(XX) XXXXX-XXXX"
             id="form-phone"
+            v-maska 
+            data-maska="(##) #####-####"
             :class="errors.phone ? 'border-error' : 'border-orion-primary-500'"
           />
 

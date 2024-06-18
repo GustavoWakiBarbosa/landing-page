@@ -23,6 +23,7 @@
     "html2canvas": "^1.4.1",
     "lodash": "^4.17.21",
     "mailcheck": "^1.1.1",
+    "maska": "^3.0.0-beta4",
     "pinia": "^2.0.9",
     "vee-validate": "^4.5.7",
     "vue": "^3.2.25",
