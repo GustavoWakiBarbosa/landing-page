@@ -36,7 +36,6 @@ setLocale({
 const validationSchema = object({
   name: string().required(),
   email: string().required().email(),
-  enterprise: string().required(),
   phone: string().required().min(10).max(11)
 })
 
@@ -46,7 +45,6 @@ const { errors, handleSubmit, isSubmitting } = useForm({
 
 const { value: name } = useField<string>('name')
 const { value: email } = useField<string>('email')
-const { value: enterprise } = useField<string>('enterprise')
 const utmSource = getParameterByName('utm_source')
 const { value: phone } = useField<string>('phone')
 const showAlert = ref(false)
@@ -125,27 +123,6 @@ const onSubmit = handleSubmit(async (values) => {
           <span v-if="errors.name" class="text-orion-body-sm text-error ml-1">{{
             errors.name
           }}</span>
-        </div>
-        <div class="form-control w-full md:w-[400px] mb-2">
-          <label class="label p-0 pb-1">
-            <span
-              class="label-text text-orion-title-md font-medium text-orion-neutrals-500"
-              >Empresa</span
-            >
-          </label>
-          <input
-            v-model.trim="enterprise"
-            type="text"
-            placeholder="Digite seu nome"
-            class="bg-orion-secondary-500 border-b-2 border-orion-secondary-300 focus:bg-white focus:text-orion-primary-500 input rounded-none border-0 placeholder:text-grey focus:outline-none focus:ring-0 focus:border-orion-primary-500 outline-offset-0"
-            :class="enterprise ? 'text-white' : 'border-orion-primary-500'"
-            id="form-enterprise"
-          />
-          <span
-            v-if="errors.enterprise"
-            class="text-orion-body-sm text-error ml-1"
-            >{{ errors.enterprise }}</span
-          >
         </div>
         <div class="form-control w-full md:w-[400px] mb-4">
           <label class="label p-0 pb-1">
