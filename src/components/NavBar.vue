@@ -141,7 +141,7 @@ onMounted(() => {
             aria-label="Toggle drawer"
             @click="drawerStore.showDrawer = !drawerStore.showDrawer"
           >
-            <ci-menu-alt-02 class="w-8 h-8 text-primary" />
+            <ci-menu-alt-02 class="w-8 h-8 text-orion-primary-50" />
           </button>
         </div>
       </div>

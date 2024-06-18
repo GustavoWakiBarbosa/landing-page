@@ -7,6 +7,7 @@ import generatedRoutes from 'virtual:generated-pages'
 import Vue3TouchEvents from "vue3-touch-events";
 import Vue3Autocounter from 'vue3-autocounter';
 
+
 // tailwind
 import './styles/index.css'
 
