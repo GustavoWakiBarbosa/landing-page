@@ -4,7 +4,8 @@
   <Hero id="sobre" />
   <WhyUs id="whyus" />
   <Personals id="personals" />
-  <!-- <Partners id="partiners" :typeCarousel="'Gray'" />
+  <Cliente id="cliente" />
+  <Partners id="partiners" :typeCarousel="'Gray'" />
   <DigitalTransformation id="digitalTransformation" />
   <Whyorion id="whyorion" />
   <Services id="servicos" />
