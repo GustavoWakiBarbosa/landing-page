@@ -11,6 +11,10 @@ let prevScrollPos = window.scrollY;
 
 const navBarControl = ref(false);
 
+function pushToLogin() {
+  router.push({ path: "/login" });
+}
+
 const handleScroll = () => {
   scrollY.value = window.scrollY;
   const currentScrollPos = window.scrollY;
@@ -129,7 +133,7 @@ onMounted(() => {
               ? 'bg-orion-primary-500 text-orion-secondary-50 hover:bg-orion-primary-700 hover:text-white hover:border-black'
               : 'bg-transparent border-2 border-orion-secondary-500 text-orion-secondary-500 hover:bg-orion-primary-500 hover:text-white '
           "
-          @click="scrollTo('#form')"
+          @click="pushToLogin()"
         >
           Logar
         </button>

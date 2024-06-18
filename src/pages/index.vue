@@ -4,8 +4,8 @@
   <Hero id="sobre" />
   <WhyUs id="whyus" />
   <Personals id="personals" />
-  <Cliente id="cliente" />
-  <Partners id="partiners" :typeCarousel="'Gray'" />
+  <!-- <Cliente id="cliente" /> -->
+  <!-- <Partners id="partiners" :typeCarousel="'Gray'" />
   <DigitalTransformation id="digitalTransformation" />
   <Whyorion id="whyorion" />
   <Services id="servicos" />
@@ -13,7 +13,7 @@
   <Partners id="partiners" :typeCarousel="'Colored'" />
   <SuccesCases id="cases" />
   <Form id="form" />
-  <Team id="carreiras" /> -->
+  <Team id="carreiras" /> --> -->
   <Footer id="footer" />
 </template>
 

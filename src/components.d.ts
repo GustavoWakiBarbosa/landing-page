@@ -11,6 +11,8 @@ declare module 'vue' {
     CallToActionBtn: typeof import('./components/CallToActionBtn.vue')['default']
     CiCloseBig: typeof import('~icons/ci/close-big')['default']
     CiMenuAlt02: typeof import('~icons/ci/menu-alt02')['default']
+    CiWarningOutline: typeof import('~icons/ci/warning-outline')['default']
+    Cliente: typeof import('./components/Cliente.vue')['default']
     DigitalTransformation: typeof import('./components/DigitalTransformation.vue')['default']
     Experience: typeof import('./components/Experience.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
