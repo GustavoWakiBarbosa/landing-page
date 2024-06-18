@@ -126,12 +126,12 @@ onMounted(() => {
           class="text-orion-label-sm font-medium px-4 py-[0.88rem] transition duration-200"
           :class="
             navBarControl == false
-              ? 'bg-orion-primary-500 text-orion-secondary-50 hover:bg-orion-primary-700 hover:text-white hover:border-primary'
-              : 'bg-transparent border-2 border-orion-secondary-500 text-orion-secondary-500 hover:bg-orion-primary-500 hover:text-white hover:border-primary'
+              ? 'bg-orion-primary-500 text-orion-secondary-50 hover:bg-orion-primary-700 hover:text-white hover:border-black'
+              : 'bg-transparent border-2 border-orion-secondary-500 text-orion-secondary-500 hover:bg-orion-primary-500 hover:text-white '
           "
           @click="scrollTo('#form')"
         >
-          Fale conosco
+          Logar
         </button>
         <div v-if="!grid.xl" class="flex-none">
           <button

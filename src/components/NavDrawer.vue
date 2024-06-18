@@ -110,7 +110,7 @@ const handleClick = () => {
             class="py-[0.88rem] px-4 border border-orion-secondary-50 hover:bg-orion-primary-500 hover:text-orion-secondary-50 hover:border-transparent font-medium text-orion-secondary-50 w-full transition duration-200"
             @click="scrollToId('#form')"
           >
-            Fale conosco
+            Logar
           </button>
         </div>
       </div>
