@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import axios from 'axios'
-import { setLocale, object, string } from 'yup'
-import { vMaska } from "maska"
+import { setLocale, object, string} from 'yup'
+import { ref as yupRef } from 'yup';
+// import { vMaska } from "maska"
 
 
 const router = useRouter()
@@ -38,6 +39,10 @@ setLocale({
 const validationSchema = object({
   name: string().required(),
   email: string().required().email(),
+  password: string().required(),
+  confirmPassword: string()
+    .required('Confirmação de senha é obrigatória')
+    .oneOf([yupRef('password'), null], 'As senhas devem coincidir'),
   phone: string().required().min(10).max(11)
 })
 
@@ -47,6 +52,8 @@ const { errors, handleSubmit, isSubmitting } = useForm({
 
 const { value: name } = useField<string>('name')
 const { value: email } = useField<string>('email')
+const { value: password } = useField<string>('password')
+const { value: confirmPassword } = useField<string>('confirmPassword')
 const utmSource = getParameterByName('utm_source')
 const { value: phone } = useField<string>('phone')
 const showAlert = ref(false)
@@ -57,13 +64,16 @@ const showSuccessStyles = computed(
 )
 const onSubmit = handleSubmit(async (values) => {
   const formValues = {
-    ...values,
-    utmSource
+    phoneNumber: phone.value,
+    email: email.value,
+    name: name.value,
+    role: 'USER',
+    password: password.value,
   }
 
   try {
     const response = await axios.post(
-      '',
+      'http://localhost:8080/api/auth/signup',
       formValues
     )
     if (response.status === 200) {
@@ -79,9 +89,9 @@ const onSubmit = handleSubmit(async (values) => {
     failedToSubmit.value = true
   } finally {
     showAlert.value = true
-    setInterval(() => {
-      router.push('/obrigadoFormulario')
-    }, 2000)
+    // setInterval(() => {
+    //   router.push('/obrigadoFormulario')
+    // }, 2000)
   }
 })
 </script>
@@ -146,6 +156,44 @@ const onSubmit = handleSubmit(async (values) => {
             errors.email
           }}</span>
         </div>
+        <div class="form-control w-full md:w-[400px] mb-2">
+          <label class="label p-0 pb-1">
+            <span
+              class="label-text text-orion-title-md font-medium text-orion-neutrals-500"
+              >Senha</span
+            >
+          </label>
+          <input
+            v-model.trim="password"
+            type="password"
+            placeholder="Digite sua senha"
+            class="bg-orion-secondary-500 border-b-2 border-orion-secondary-300 focus:bg-white focus:text-orion-primary-500 input rounded-none border-0 placeholder:text-grey focus:outline-none focus:ring-0 focus:border-orion-primary-500 outline-offset-0"
+            :class="password ? 'text-white' : 'border-orion-primary-500'"
+            id="form-password"
+          />
+          <span v-if="errors.password" class="text-orion-body-sm text-error ml-1">{{
+            errors.password
+          }}</span>
+        </div>
+                <div class="form-control w-full md:w-[400px] mb-2">
+          <label class="label p-0 pb-1">
+            <span
+              class="label-text text-orion-title-md font-medium text-orion-neutrals-500"
+              >Confirme sua Senha</span
+            >
+          </label>
+          <input
+            v-model.trim="confirmPassword"
+            type="password"
+            placeholder="Digite sua senha"
+            class="bg-orion-secondary-500 border-b-2 border-orion-secondary-300 focus:bg-white focus:text-orion-primary-500 input rounded-none border-0 placeholder:text-grey focus:outline-none focus:ring-0 focus:border-orion-primary-500 outline-offset-0"
+            :class="confirmPassword ? 'text-white' : 'border-orion-primary-500'"
+            id="form-confirmPassword"
+          />
+          <span v-if="errors.confirmPassword" class="text-orion-body-sm text-error ml-1">{{
+            errors.confirmPassword
+          }}</span>
+        </div>
         <div class="form-control w-full md:w-[400px] mb-4">
           <label class="label p-0 pb-1">
             <span
@@ -160,8 +208,6 @@ const onSubmit = handleSubmit(async (values) => {
             class="bg-orion-secondary-500 border-b-2 border-orion-secondary-300 focus:bg-white text-white focus:text-orion-primary-500 input rounded-none border-0 placeholder:text-grey focus:outline-none focus:ring-0 focus:border-orion-primary-500 outline-offset-0"
             placeholder="(XX) XXXXX-XXXX"
             id="form-phone"
-            v-maska 
-            data-maska="(##) #####-####"
             :class="errors.phone ? 'border-error' : 'border-orion-primary-500'"
           />
 

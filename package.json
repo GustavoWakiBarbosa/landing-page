@@ -2,7 +2,7 @@
   "name": "orion-landing",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vue-tsc --noEmit && vite-ssg build",
     "preview": "vite preview",
     "preview-https": "serve dist"
