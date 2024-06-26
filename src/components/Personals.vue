@@ -24,6 +24,20 @@ const personals = [
     src: "src/assets/personals/Image4.jpg",
   }
 ]
+
+const windowWidth = ref(window.innerWidth);
+
+const itemsToShow = computed(() => {
+  if(windowWidth.value >= 1920){
+    return 3
+  }else if(windowWidth.value >= 1280){
+    return 2
+  } else {
+    return 1
+  }
+  // return windowWidth.value < 1920 ? 2 : 3;
+});
+
 </script>
 
 <template>
@@ -35,13 +49,13 @@ const personals = [
       <span class="text-orion-primary-500  text-orion-display-lg ">Trainers</span>
     </div>
 
-    <div class="max-w-[30rem] text-center mt-5">
+    <div class="max-w-[30rem] text-center my-5">
       <p class="text-orion-secondary-50 text-orion-title-md">Descubra treinos únicos e personalizados, projetados para alcançar seus objetivos individuais com precisão e paixão.
       </p>
     </div>
-    <div>
+    <div class="max-w-[380px] md:max-w-[1000px] 2xl:max-w-[1920px]">
       <Carousel
-      :items-to-show="3"
+      :items-to-show="itemsToShow"
       class="flex justify-center gap-20 px-10 lg:px-[4rem]"
       ref="carousel"
       v-model="currentSlide"
