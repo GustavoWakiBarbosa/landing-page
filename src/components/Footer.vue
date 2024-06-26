@@ -7,10 +7,6 @@ const navigationLinks = ref([
     target: '#sobre'
   },
   {
-    text: 'Serviços',
-    target: '#servicos'
-  },
-  {
     text: 'Cases',
     target: '#cases'
   },
@@ -18,10 +14,6 @@ const navigationLinks = ref([
     text: 'Carreiras',
     target: '#carreiras'
   }
-  // {
-  //   text: "Blog",
-  //   target: "#blog",
-  // },
 ])
 const scrollTo = inject('scrollToId')
 
@@ -45,16 +37,16 @@ const goTo = (target) => {
         class="flex flex-col justify-center items-center lg:flex-row gap-16 lg:self-start mb-14 lg:mb-0"
       >
         <img
-          src="/src/assets/logos-orion-eds/orionWhiteLogo.svg"
+          src=""
           alt="orion"
           width="auto"
           height="auto"
           class="object-scale-down w-auto h-auto max-w-fit max-h-12"
         />
 
-        <a href="https://www2.extremedigital.com.br/" target="_blank">
+        <a href="https://wwww.orionfitness.com.br/" target="_blank">
           <img
-            src="/src/assets/logos-orion-eds/logoextremegroup.svg"
+            src=""
             alt="Eds."
             width="auto"
             height="auto"
@@ -119,7 +111,7 @@ const goTo = (target) => {
           </div>
           <div>
             <a
-              href="https://www.linkedin.com/company/orion-digital-experience/"
+              href=""
               target="_blank"
             >
               <svg
@@ -144,7 +136,7 @@ const goTo = (target) => {
     </div>
     <div class="mt-[4.5rem]">
       <h2 class="text-center text-xs">
-        EXTREME DIGITAL EXPERIENCE LTDA. © Todos os direitos reservados.
+        Orion Fitness. © Todos os direitos reservados.
       </h2>
     </div>
   </section>
