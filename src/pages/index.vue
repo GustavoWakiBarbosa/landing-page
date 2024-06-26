@@ -3,6 +3,7 @@
   <NavDrawer />
   <Hero id="sobre" />
   <WhyUs id="whyus" />
+  <Experience id="experience" />
   <Personals id="personals" />
   <!-- <Cliente id="cliente" /> -->
   <!-- <Partners id="partiners" :typeCarousel="'Gray'" />
@@ -13,13 +14,14 @@
   <Partners id="partiners" :typeCarousel="'Colored'" />
   <SuccesCases id="cases" />
   <Form id="form" />
-  <Team id="carreiras" /> --> -->
+  <Team id="carreiras" /> --> 
   <Footer id="footer" />
 </template>
 
 <script setup lang="ts">
 import gsap from 'gsap'
 import { useHead } from '@vueuse/head'
+import Experience from '~/components/Experience.vue'
 const scrollToId = <Function>inject('scrollToId')
 
 useHead({

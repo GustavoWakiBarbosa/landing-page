@@ -36,23 +36,9 @@ const goTo = (target) => {
       <div
         class="flex flex-col justify-center items-center lg:flex-row gap-16 lg:self-start mb-14 lg:mb-0"
       >
-        <img
-          src=""
-          alt="orion"
-          width="auto"
-          height="auto"
-          class="object-scale-down w-auto h-auto max-w-fit max-h-12"
-        />
-
-        <a href="https://wwww.orionfitness.com.br/" target="_blank">
-          <img
-            src=""
-            alt="Eds."
-            width="auto"
-            height="auto"
-            class="object-scale-down w-auto h-auto max-w-fit max-h-12"
-          />
-        </a>
+        <h2 class="text-orion-secondary-50 text-orion-display-md" :class="navBarControl == true ? 'text-orion-primary-500' : ''">
+          Orion <span class="text-orion-primary-500">Fitness</span>
+        </h2>
       </div>
       <div
         class="flex flex-col gap-20 lg:gap-36 lg:flex-row justify-between md:gap-36"
