@@ -43,7 +43,7 @@ const itemsToShow = computed(() => {
 <template>
   <div class="bg-orion-secondary-700 py-10 flex flex-col justify-center items-center px-20">
     <div class="max-w-[30rem] text-center">
-      <h2 class="text-orion-secondary-50 text-orion-display-lg leading-10">
+      <h2 class="text-orion-secondary-50 text-orion-display-lg leading-12 md:leading-10">
         Nossos Personais 
       </h2>
       <span class="text-orion-primary-500  text-orion-display-lg ">Trainers</span>
