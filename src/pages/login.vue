@@ -77,7 +77,7 @@ const onSubmit = handleSubmit(async (values) => {
   } finally {
     showAlert.value = true
     setInterval(() => {
-      router.push('/obrigadoFormulario')
+      router.push('/home')
     }, 2000)
   }
 })
@@ -170,8 +170,8 @@ const onSubmit = handleSubmit(async (values) => {
           <div class="flex-1">
             <label class="mx-3">{{
               failedToSubmit
-                ? 'Um erro ocorreu ao enviar o formulário :('
-                : 'Formulário enviado com sucesso!'
+                ? 'Senha ou login errado. Tente novamente :('
+                : 'Logado com sucesso!'
             }}</label>
           </div>
           <div class="flex-none">
