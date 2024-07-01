@@ -3,18 +3,23 @@ const router = useRouter()
 
 const navigationLinks = ref([
   {
-    text: 'Sobre a orion',
-    target: '#sobre'
+    text: "Sobre a orion",
+    target: "#sobre",
   },
   {
-    text: 'Cases',
-    target: '#cases'
+    text: "Porque nós",
+    target: "#whyus",
   },
   {
-    text: 'Carreiras',
-    target: '#carreiras'
+    text: "Experiência",
+    target: "#experience",
+  },
+  {
+    text: "Personais",
+    target: "#personals",
   }
-])
+]);
+
 const scrollTo = inject('scrollToId')
 
 const goTo = (target) => {

@@ -76,22 +76,18 @@ const onSubmit = handleSubmit(async (values) => {
       'http://localhost:8080/api/auth/signup',
       formValues
     )
-    if (response.status === 200) {
-      // @ts-ignore
-      dataLayer.push({
-        event: 'form_send',
-        formValues
-      })
+    setInterval(() => {
+      if (response.status === 200) {
+        pushToLogin()
     }
+    }, 2000)
+
     localStorage.setItem('sentForm', 'true')
     failedToSubmit.value = false
   } catch (error) {
     failedToSubmit.value = true
   } finally {
     showAlert.value = true
-    setInterval(() => {
-      pushToLogin()
-    }, 2000)
   }
 })
 </script>

@@ -44,21 +44,17 @@ const navigationLinks = ref([
     target: "#sobre",
   },
   {
-    text: "Serviços",
-    target: "#servicos",
+    text: "Porque nós",
+    target: "#whyus",
+  },
+  {
+    text: "Experiência",
+    target: "#experience",
   },
   {
     text: "Personais",
-    target: "#personais",
-  },
-  {
-    text: "Feedbacks",
-    target: "#carreiras",
-  },
-  {
-    text: "Fale conosco",
-    target: "#faleconosco",
-  },
+    target: "#personals",
+  }
 ]);
 
 function onNavbarClick(link) {
@@ -96,7 +92,7 @@ onMounted(() => {
       :class="{
         'backdrop-blur-lg': scrollY > 100,
         'backdrop-blur-none': scrollY < 100,
-        'bg-orion-neutrals-50 backdrop-blur-none': navBarControl == true,
+        'bg-orion-neutrals-50 ': navBarControl == true,
       }"
     >
       <div class="w-full flex justify-between xl:container">
@@ -117,8 +113,8 @@ onMounted(() => {
               class="normal-case text-bg-orion-secondary-500 font-medium p-[0.62rem] h-auto inline-block border-b-4 border-transparent relative"
               :class="
                 navBarControl == false
-                  ? 'text-orion-neutrals-500'
-                  : 'text-orion-secondary-500-500'
+                  ? 'text-orion-neutrals-50'
+                  : 'text-orion-neutrals-50'
               "
             >
               {{ link.text }}
@@ -131,7 +127,7 @@ onMounted(() => {
           :class="
             navBarControl == false
               ? 'bg-orion-primary-500 text-orion-secondary-50 hover:bg-orion-primary-700 hover:text-white hover:border-black'
-              : 'bg-transparent border-2 border-orion-secondary-500 text-orion-secondary-500 hover:bg-orion-primary-500 hover:text-white '
+              : 'bg-transparent border-2 border-orion-secondary-50 text-orion-secondary-50 hover:bg-orion-primary-500 hover:text-white '
           "
           @click="pushToLogin()"
         >

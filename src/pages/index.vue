@@ -5,16 +5,6 @@
   <WhyUs id="whyus" />
   <Experience id="experience" />
   <Personals id="personals" />
-  <!-- <Cliente id="cliente" /> -->
-  <!-- <Partners id="partiners" :typeCarousel="'Gray'" />
-  <DigitalTransformation id="digitalTransformation" />
-  <Whyorion id="whyorion" />
-  <Services id="servicos" />
-  <ServiceNow id="serviceNow" />
-  <Partners id="partiners" :typeCarousel="'Colored'" />
-  <SuccesCases id="cases" />
-  <Form id="form" />
-  <Team id="carreiras" /> --> 
   <Footer id="footer" />
 </template>
 
@@ -117,38 +107,6 @@ onMounted(async () => {
   }
 })
 
-// onMounted(() => {
-//   // const fadeSlideUps: Array<gsap.DOMTarget> = gsap.utils.toArray('.fade-slide-up')
-//   // fadeSlideUps.forEach(fsu => {
-//   //   console.log('sliding', fsu)
-//   //   gsap.from(fsu, {
-//   //     opacity: 0,
-//   //     yPercent: 50
-//   //   })
-//   //   gsap.to(fsu, {
-//   //     ease: 'power2.out',
-//   //     scrollTrigger: {
-//   //       trigger: fsu,
-//   //       toggleActions: 'restart none none none',
-//   //       markers: true,
-//   //       start: '0 80%'
-//   //     },
-//   //     opacity: 1,
-//   //     duration: 2
-//   //   })
-//   // })
-
-//   ScrollTrigger.batch(".gs_reveal", {
-//     //interval: 0.1, // time window (in seconds) for batching to occur.
-//     //batchMax: 3,   // maximum batch size (targets)
-//     onEnter: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: { each: 0.5 }, overwrite: true }),
-//     onLeave: batch => gsap.set(batch, { opacity: 0, y: -100, overwrite: true }),
-//     onEnterBack: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.5, overwrite: true }),
-//     onLeaveBack: batch => gsap.set(batch, { opacity: 0, y: 100, overwrite: true })
-//     // you can also define things like start, end, etc.
-//   })
-
-// })
 </script>
 
 <route lang="yaml">

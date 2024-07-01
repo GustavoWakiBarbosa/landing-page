@@ -7,16 +7,12 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Blog: typeof import('./components/Blog.vue')['default']
-    CallToActionBtn: typeof import('./components/CallToActionBtn.vue')['default']
     CiCloseBig: typeof import('~icons/ci/close-big')['default']
     CiMenuAlt02: typeof import('~icons/ci/menu-alt02')['default']
     CiWarningOutline: typeof import('~icons/ci/warning-outline')['default']
     Cliente: typeof import('./components/Cliente.vue')['default']
-    DigitalTransformation: typeof import('./components/DigitalTransformation.vue')['default']
     Experience: typeof import('./components/Experience.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
-    Form: typeof import('./components/Form.vue')['default']
     Hero: typeof import('./components/Hero.vue')['default']
     NavBar: typeof import('./components/NavBar.vue')['default']
     NavDrawer: typeof import('./components/NavDrawer.vue')['default']
@@ -24,11 +20,6 @@ declare module 'vue' {
     Personals: typeof import('./components/Personals.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    ServiceNow: typeof import('./components/ServiceNow.vue')['default']
-    Services: typeof import('./components/Services.vue')['default']
-    SuccesCases: typeof import('./components/SuccesCases.vue')['default']
-    Team: typeof import('./components/Team.vue')['default']
-    WhyEdx: typeof import('./components/whyEdx.vue')['default']
     WhyUs: typeof import('./components/WhyUs.vue')['default']
   }
 }

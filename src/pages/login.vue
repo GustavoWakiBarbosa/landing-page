@@ -60,25 +60,22 @@ const onSubmit = handleSubmit(async (values) => {
 
   try {
     const response = await axios.post(
-      'localhost:8080/api/auth/login',
+      'http://localhost:8080/api/auth/login',
       formValues
     )
-    if (response.status === 200) {
-      // @ts-ignore
-      dataLayer.push({
-        event: 'form_send',
-        formValues
-      })
+    console.log('response:', response)
+    setInterval(() => {
+      if (response.status === 200) {
+      localStorage.setItem('token', response.data.token)
+      router.push('/home')
     }
-    localStorage.setItem('sentForm', 'true')
+    }, 2000)
+    
     failedToSubmit.value = false
   } catch (error) {
     failedToSubmit.value = true
   } finally {
     showAlert.value = true
-    setInterval(() => {
-      router.push('/home')
-    }, 2000)
   }
 })
 </script>
@@ -133,7 +130,7 @@ const onSubmit = handleSubmit(async (values) => {
           </label>
           <input
             v-model.trim="password"
-            type="text"
+            type="password"
             placeholder="Digite seu senha"
             class="bg-orion-secondary-500 border-b-2 border-orion-secondary-300 focus:bg-white focus:text-orion-primary-500 input rounded-none border-0 placeholder:text-grey focus:outline-none focus:ring-0 focus:border-orion-primary-500 outline-offset-0"
             :class="password ? 'text-white' : 'border-orion-primary-500'"
