@@ -24,7 +24,7 @@ const scrollToId = inject("scrollToId");
           <div class="flex gap-[1.44rem]">
             <button
               class="bg-transparent text-orion-neutrals-500 px-4 py-[0.88rem] border-[1.5px] border-orion-neutrals-500 text-orion-label-sm font-medium hover:bg-orion-primary-500 hover:text-orion-secondary-50 hover:border-transparent transition duration-200"
-              @click="scrollToId('#servicos')"
+              @click="scrollToId('#whyus')"
             >
               Conheça nossos serviços
             </button>

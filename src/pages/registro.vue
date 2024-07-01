@@ -7,6 +7,8 @@ import { ref as yupRef } from 'yup';
 
 const router = useRouter()
 
+const adm = ref(false)
+
 function pushToLogin() {
   router.push({ path: "/login" });
 }
