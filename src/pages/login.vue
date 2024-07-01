@@ -85,12 +85,12 @@ const onSubmit = handleSubmit(async (values) => {
 
 <template>
   <section
-    class="flex justify-center bg-form px-6 lg:px-[4rem] xl:px-[10rem] py-10 lg:py-20 lg:h-screen"
+    class="flex justify-center items-center bg-form px-6 lg:px-[4rem] xl:px-[10rem] py-10 lg:py-20 h-screen"
   >
     <div
-      class="lg:py-16 md:py-0 h-full md:flex md:items-center md:justify-center xl:flex xl:items-center xl:justify-center max-w-[50rem]"
+      class="lg:py-16 md:py-0 flex-col lg:flex-row h-full flex items-center justify-center max-w-[50rem]"
     >
-      <div class="flex flex-col">
+      <div class="flex flex-col text-center lg:text-start">
         <h2
           class="mb-4 lg:mb-12 text-orion-display-sm text-orion-neutrals-500 font-semibold"
         >
@@ -101,7 +101,7 @@ const onSubmit = handleSubmit(async (values) => {
         </p>
       </div>
       <form
-        class="flex flex-col flex-wrap gap-[1.81rem] py-10 lg:py-14 md:py-8 md:px-8"
+        class="flex flex-col flex-wrap gap-[1.81rem] py-10 lg:py-14 md:py-8 md:px-8 w-full max-w-[400px]"
         @submit.prevent="onSubmit"
       >
         <div class="form-control w-full md:w-[400px] mb-4">
