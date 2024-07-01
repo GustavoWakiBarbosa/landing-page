@@ -15,7 +15,7 @@ import Experience from '~/components/Experience.vue'
 const scrollToId = <Function>inject('scrollToId')
 
 useHead({
-  title: 'Extreme Digital Experience',
+  title: 'Orion Fitness',
   meta: [
     {
       name: `description`,
