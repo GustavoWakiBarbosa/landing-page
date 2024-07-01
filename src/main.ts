@@ -5,7 +5,6 @@ import App from './App.vue'
 import { setupLayouts } from 'virtual:generated-layouts'
 import generatedRoutes from 'virtual:generated-pages'
 import Vue3TouchEvents from "vue3-touch-events";
-import Vue3Autocounter from 'vue3-autocounter';
 
 
 // tailwind
@@ -22,7 +21,6 @@ export const createApp = ViteSSG(
   // function to have custom setups
   (ctx) => {
     ctx.app.use(Vue3TouchEvents);
-    ctx.app.component('vue3-autocounter', Vue3Autocounter);
     Object.values(import.meta.globEager('./modules/*.ts')).map(i => i.install?.(ctx))
   }
 )

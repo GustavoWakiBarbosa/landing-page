@@ -60,7 +60,7 @@ const onSubmit = handleSubmit(async (values) => {
 
   try {
     const response = await axios.post(
-      '',
+      'localhost:8080/api/auth/login',
       formValues
     )
     if (response.status === 200) {
