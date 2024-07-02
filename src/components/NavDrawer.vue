@@ -26,21 +26,17 @@ const navigationLinks = ref([
     target: "#sobre",
   },
   {
-    text: "Serviços",
-    target: "#servicos",
+    text: "Porque nós",
+    target: "#whyus",
   },
   {
-    text: "Cases",
-    target: "#cases",
+    text: "Experiência",
+    target: "#experience",
   },
   {
-    text: "Carreiras",
-    target: "#carreiras",
-  },
-  // {
-  //   text: "Blog",
-  //   target: "#blog",
-  // },
+    text: "Personais",
+    target: "#personals",
+  }
 ]);
 const scrollTo = <Function>inject("scrollToId");
 
